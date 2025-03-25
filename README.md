@@ -1,7 +1,7 @@
 # Ontology
 A standardized RDF vocabulary for representing information from IPBES products on the Semantic Web. These products are listed on https://github.com/IPBES-Data/IPBES_LOD. This repository will host different IPBES ontologies.
 
-The first one that has been developed is REPORT which represents intergovernmental reports and the broad topics and information that they cover. More information about this ontology can be found at: https://github.com/IPBES-Data/IPBES_Ontology
+The first one that has been developed is REPORT version 5 which represents intergovernmental reports and the broad topics and information that they cover. More information about this ontology can be found at: https://github.com/IPBES-Data/IPBES_Ontology.
 
 ## Example Usage
 1. In RDF/Turtle Syntax
