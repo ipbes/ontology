@@ -1,0 +1,2 @@
+# ontology
+IPBES sparql prefixes
