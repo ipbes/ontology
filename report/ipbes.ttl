@@ -13,15 +13,15 @@ ipbes:il
 
 ipbes:kg 
     a ipbes:KnowledgeGap ;
-    ipbes:Report ipbes:> ;
-    ipbes:SubChapter ipbes:sch/> ;
+    ipbes:Report ipbes: ;
+    ipbes:SubChapter ipbes:sch ;
     ipbes:hasDescription "The text that further describes each knowlege gap that is related to the subchapters mentioned in the text" ;
     ipbes:identifier "The identifier of the sub-chapter or illustration mentioned in description" .
 
 ipbes:subm 
     a ipbes:SubMessage ;
     ipbes:Illustration "Link to class Illustration. Used for mentioned tables, figures or boxes in the sub-message" ;
-    ipbes:SubChapter ipbes:sch/> ;
+    ipbes:SubChapter ipbes:sch ;
     ipbes:hasDescription "The text that further describes the content" ;
     ipbes:hasEstablishedIncomplete "Level of confidence" ;
     ipbes:hasInconclusive "Level of confidence" ;
@@ -32,7 +32,7 @@ ipbes:subm
 ipbes:bgm 
     a ipbes:BackgroundMessage ;
     ipbes:Illustration "Link to class Illustration. Used for mentioned tables, figures or boxes in the bakcgound message" ;
-    ipbes:Report ipbes:> ;
+    ipbes:Report ipbes: ;
     ipbes:SubMessage "Link to the sub-messages used in each background message" ;
     ipbes:hasDescription "The text that further describes the content" ;
     ipbes:hasEstablishedIncomplete "Level of confidence" ;
@@ -44,9 +44,9 @@ ipbes:bgm
 
 ipbes:key 
     a ipbes:KeyMessage ;
-    ipbes:BackgroundMessage ipbes:bgm/> ;
+    ipbes:BackgroundMessage ipbes:bgm ;
     ipbes:Illustration "Link to class Illustration. Used for mentioned tables, figures or boxes in the key message" ;
-    ipbes:Report ipbes:> ;
+    ipbes:Report ipbes: ;
     ipbes:hasDescription "The text that further describes the content" ;
     ipbes:hasEstablishedIncomplete "Level of confidence" ;
     ipbes:hasInconclusive "Level of confidence" ;
@@ -57,9 +57,9 @@ ipbes:key
 
 ipbes:ref 
     a ipbes:Reference ;
-    ipbes:Chapter ipbes:ch/> ;
-    ipbes:Report ipbes:> ;
-    ipbes:SubChapter ipbes:sch/> ;
+    ipbes:Chapter ipbes:ch ;
+    ipbes:Report ipbes: ;
+    ipbes:SubChapter ipbes:sch/ ;
     ipbes:hasDescription "The text that further describes the content" ;
     ipbes:hasDoi "The DOI number" ;
     owl:sameAs "Link to other resources such as zotero repository of the reference" .
@@ -82,18 +82,18 @@ ipbes:person
 
 ipbes:ch
     a ipbes:Chapter ;
-    ipbes:Report ipbes:> ;
+    ipbes:Report ipbes: ;
     ipbes:hasDoi "The DOI number" ;
     ipbes:identifier "The identifier of the chapter or sub-chapter or key message in the report" ;
     skos:prefLabel "The label that is preferred to be used for a chapter, sub-chapter , report or person" ;
-    foaf:Person ipbes:person/> .
+    foaf:Person ipbes:person/ .
 
 ipbes:sch 
     a ipbes:SubChapter ;
-    ipbes:Chapter ipbes:ch/> ;
-    ipbes:KeyMessage ipbes:key/> ;
-    ipbes:Reference ipbes:ref/> ;
-    ipbes:Report ipbes:> ;
+    ipbes:Chapter ipbes:ch/ ;
+    ipbes:KeyMessage ipbes:key/ ;
+    ipbes:Reference ipbes:ref/ ;
+    ipbes:Report ipbes: ;
     ipbes:hasDescription "The text that further describes the content" ;
     ipbes:identifier "The identifier of the chapter or sub-chapter or key message in the report" ;
     skos:prefLabel "The label that is preferred to be used for a chapter, sub-chapter , report or person" .
@@ -104,4 +104,4 @@ ipbes
     ipbes:year "The publication year" ;
     skos:altLabel "Alternative writing format or language of the preferred label" ;
     skos:prefLabel "The label that is preferred to be used for a chapter, sub-chapter , report or person" ;
-    foaf:Person ipbes:person/> .
+    foaf:Person ipbes:person/ .
