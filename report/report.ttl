@@ -1,98 +1,149 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ipbes: <http://ontology.ipbes.net/report> .
+@prefix ipbes: <http://ontology.ipbes.net/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://ontology.ipbes.net/report/il/> a ipbes:Illustration ;
-    ipbes:hasDescription "The text that further describes the content" ;
-    ipbes:hasDoi "The DOI number" ;
-    ipbes:identifier "The identifier of the chapter or sub-chapter or key message in the report" ;
-    owl:sameAs "Link to other resources such as zotero repository of the reference" ;
-    skos:prefLabel "The label that is preferred to be used for a chapter, sub-chapter , report or person" .
+ipbes:ca a owl:DatatypeProperty ;
+    rdfs:label "Ca"@en ;
+    rdfs:comment "Property representing the relationship 'ca' in the IPBES ontology."@en ;
+    rdfs:domain foaf:Person .
 
-<http://ontology.ipbes.net/report/kg/> a ipbes:KnowledgeGap ;
-    ipbes:Report <http://ontology.ipbes.net/report/> ;
-    ipbes:SubChapter <http://ontology.ipbes.net/report/sch/> ;
-    ipbes:hasDescription "The text that further describes each knowlege gap that is related to the subchapters mentioned in the text" ;
-    ipbes:identifier "The identifier of the sub-chapter or illustration mentioned in description" .
+ipbes:cl a owl:DatatypeProperty ;
+    rdfs:label "Cl"@en ;
+    rdfs:comment "Property representing the relationship 'cl' in the IPBES ontology."@en ;
+    rdfs:domain foaf:Person .
 
-<http://ontology.ipbes.net/report/subm/> a ipbes:SubMessage ;
-    ipbes:Illustration "Link to class Illustration. Used for mentioned tables, figures or boxes in the sub-message" ;
-    ipbes:SubChapter <http://ontology.ipbes.net/report/sch/> ;
-    ipbes:hasDescription "The text that further describes the content" ;
-    ipbes:hasEstablishedIncomplete "Level of confidence" ;
-    ipbes:hasInconclusive "Level of confidence" ;
-    ipbes:hasUnresolved "Level of confidence" ;
-    ipbes:hasWellestablished "Level of confidence" ;
-    ipbes:identifier "The identifier of the chapter or sub-chapter or key message in the report" .
+ipbes:country a owl:DatatypeProperty ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "Property representing the relationship 'country' in the IPBES ontology."@en ;
+    rdfs:domain foaf:Person .
 
-<http://ontology.ipbes.net/report/bgm/> a ipbes:BackgroundMessage ;
-    ipbes:Illustration "Link to class Illustration. Used for mentioned tables, figures or boxes in the bakcgound message" ;
-    ipbes:Report <http://ontology.ipbes.net/report/> ;
-    ipbes:SubMessage "Link to the sub-messages used in each background message" ;
-    ipbes:hasDescription "The text that further describes the content" ;
-    ipbes:hasEstablishedIncomplete "Level of confidence" ;
-    ipbes:hasInconclusive "Level of confidence" ;
-    ipbes:hasUnresolved "Level of confidence" ;
-    ipbes:hasWellestablished "Level of confidence" ;
-    ipbes:identifier "The identifier of the chapter or sub-chapter or key message in the report" ;
-    skos:prefLabel "The label that is preferred to be used for a chapter, sub-chapter , report or person" .
+ipbes:cs a owl:DatatypeProperty ;
+    rdfs:label "Cs"@en ;
+    rdfs:comment "Property representing the relationship 'cs' in the IPBES ontology."@en ;
+    rdfs:domain foaf:Person .
 
-<http://ontology.ipbes.net/report/key/> a ipbes:KeyMessage ;
-    ipbes:BackgroundMessage <http://ontology.ipbes.net/report/bgm/> ;
-    ipbes:Illustration "Link to class Illustration. Used for mentioned tables, figures or boxes in the key message" ;
-    ipbes:Report <http://ontology.ipbes.net/report/> ;
-    ipbes:hasDescription "The text that further describes the content" ;
-    ipbes:hasEstablishedIncomplete "Level of confidence" ;
-    ipbes:hasInconclusive "Level of confidence" ;
-    ipbes:hasUnresolved "Level of confidence" ;
-    ipbes:hasWellestablished "Level of confidence" ;
-    ipbes:identifier "The identifier of the chapter or sub-chapter or key message in the report" ;
-    skos:prefLabel "The label that is preferred to be used for a chapter, sub-chapter , report or person" .
+ipbes:fl a owl:DatatypeProperty ;
+    rdfs:label "Fl"@en ;
+    rdfs:comment "Property representing the relationship 'fl' in the IPBES ontology."@en ;
+    rdfs:domain foaf:Person .
 
-<http://ontology.ipbes.net/report/ref/> a ipbes:Reference ;
-    ipbes:Chapter <http://ontology.ipbes.net/report/ch/> ;
-    ipbes:Report <http://ontology.ipbes.net/report/> ;
-    ipbes:SubChapter <http://ontology.ipbes.net/report/sch/> ;
-    ipbes:hasDescription "The text that further describes the content" ;
-    ipbes:hasDoi "The DOI number" ;
-    owl:sameAs "Link to other resources such as zotero repository of the reference" .
+ipbes:hasDescription a owl:DatatypeProperty ;
+    rdfs:label "has description"@en ;
+    rdfs:comment "Provides a textual description of an entity."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( ipbes:KeyMessage ipbes:SubMessage ipbes:KnowledgeGap ipbes:SubChapter ipbes:BackgroundMessage ipbes:Illustration ) ] .
 
-<http://ontology.ipbes.net/report/person/> a foaf:Person ;
-    ipbes:Chapter <http://ontology.ipbes.net/report/ch/> ;
-    ipbes:Report <http://ontology.ipbes.net/report/> ;
-    ipbes:ca "Contributing authors in the stated the chapter and report" ;
-    ipbes:cl "Coordinating lead authors in the stated the chapter and report" ;
-    ipbes:country "Country of residence of the person" ;
-    ipbes:cs "Co-chairs in the stated the chapter and report" ;
-    ipbes:fl "Fellows in the stated the chapter and report" ;
-    ipbes:la "Lead authors in the stated the chapter and report" ;
-    ipbes:re "Review editors in the stated the chapter and report" ;
-    owl:sameAs "Link to other resources about the person such as ORCID" ;
-    skos:prefLabel "The label that is preferred to be used for a chapter, sub-chapter , report or person" ;
-    foaf:firstName "First name of the person" ;
-    foaf:lastName "Family name of the person" .
+ipbes:hasDoi a owl:DatatypeProperty ;
+    rdfs:label "Hasdoi"@en ;
+    rdfs:comment "Property representing the relationship 'hasdoi' in the IPBES ontology."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( ipbes:Report ipbes:Illustration ipbes:Reference ipbes:Chapter ) ] .
 
-<http://ontology.ipbes.net/report/ch/> a ipbes:Chapter ;
-    ipbes:Report <http://ontology.ipbes.net/report/> ;
-    ipbes:hasDoi "The DOI number" ;
-    ipbes:identifier "The identifier of the chapter or sub-chapter or key message in the report" ;
-    skos:prefLabel "The label that is preferred to be used for a chapter, sub-chapter , report or person" ;
-    foaf:Person <http://ontology.ipbes.net/report/person/> .
+ipbes:hasEstablishedIncomplete a owl:DatatypeProperty ;
+    rdfs:label "Hasestablishedincomplete"@en ;
+    rdfs:comment "Property representing the relationship 'hasestablishedincomplete' in the IPBES ontology."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( ipbes:SubMessage ipbes:BackgroundMessage ) ] .
 
-<http://ontology.ipbes.net/report/sch/> a ipbes:SubChapter ;
-    ipbes:Chapter <http://ontology.ipbes.net/report/ch/> ;
-    ipbes:KeyMessage <http://ontology.ipbes.net/report/key/> ;
-    ipbes:Reference <http://ontology.ipbes.net/report/ref/> ;
-    ipbes:Report <http://ontology.ipbes.net/report/> ;
-    ipbes:hasDescription "The text that further describes the content" ;
-    ipbes:identifier "The identifier of the chapter or sub-chapter or key message in the report" ;
-    skos:prefLabel "The label that is preferred to be used for a chapter, sub-chapter , report or person" .
+ipbes:hasReport a owl:ObjectProperty ;
+    rdfs:label "has report"@en ;
+    rdfs:comment "Associates an entity with its corresponding report."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( ipbes:KeyMessage ipbes:KnowledgeGap ipbes:SubChapter foaf:Person ipbes:BackgroundMessage ipbes:Reference ipbes:Chapter ) ] ;
+    rdfs:range ipbes:Report .
 
-<http://ontology.ipbes.net/report/> a ipbes:Report ;
-    ipbes:hasDoi "The DOI number" ;
-    ipbes:year "The publication year" ;
-    skos:altLabel "Alternative writing format or language of the preferred label" ;
-    skos:prefLabel "The label that is preferred to be used for a chapter, sub-chapter , report or person" ;
-    foaf:Person <http://ontology.ipbes.net/report/person/> .
+ipbes:hasWellestablished a owl:DatatypeProperty ;
+    rdfs:label "Haswellestablished"@en ;
+    rdfs:comment "Property representing the relationship 'haswellestablished' in the IPBES ontology."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( ipbes:SubMessage ipbes:BackgroundMessage ) ] .
 
+ipbes:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier"@en ;
+    rdfs:comment "An identifier assigned to entities within the dataset."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( ipbes:KeyMessage ipbes:SubMessage ipbes:KnowledgeGap ipbes:BackgroundMessage ipbes:Illustration ) ] .
+
+ipbes:la a owl:DatatypeProperty ;
+    rdfs:label "La"@en ;
+    rdfs:comment "Property representing the relationship 'la' in the IPBES ontology."@en ;
+    rdfs:domain foaf:Person .
+
+ipbes:re a owl:DatatypeProperty ;
+    rdfs:label "Re"@en ;
+    rdfs:comment "Property representing the relationship 're' in the IPBES ontology."@en ;
+    rdfs:domain foaf:Person .
+
+ipbes:year a owl:DatatypeProperty ;
+    rdfs:label "Year"@en ;
+    rdfs:comment "Property representing the relationship 'year' in the IPBES ontology."@en ;
+    rdfs:domain ipbes:Report .
+
+
+ipbes:KnowledgeGap a owl:Class ;
+    rdfs:label "KnowledgeGap"@en ;
+    rdfs:comment "Class representing knowledgegap in the IPBES ontology."@en .
+
+ipbes:Chapter a owl:Class,
+        owl:ObjectProperty ;
+    rdfs:label "Chapter"@en ;
+    rdfs:comment "Class representing chapter in the IPBES ontology."@en,
+        "Property representing the relationship 'chapter' in the IPBES ontology."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( foaf:Person ipbes:Reference ipbes:SubChapter ) ] ;
+    rdfs:range ipbes:Chapter .
+
+ipbes:Illustration a owl:Class,
+        owl:ObjectProperty ;
+    rdfs:label "Illustration"@en ;
+    rdfs:comment "Class representing illustration in the IPBES ontology."@en,
+        "Property representing the relationship 'illustration' in the IPBES ontology."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( ipbes:KeyMessage ipbes:BackgroundMessage ipbes:SubMessage ) ] ;
+    rdfs:range ipbes:Illustration .
+
+ipbes:KeyMessage a owl:Class ;
+    rdfs:label "KeyMessage"@en ;
+    rdfs:comment "Class representing keymessage in the IPBES ontology."@en .
+
+ipbes:Reference a owl:Class,
+        owl:ObjectProperty ;
+    rdfs:label "Reference"@en ;
+    rdfs:comment "Class representing reference in the IPBES ontology."@en,
+        "Property representing the relationship 'reference' in the IPBES ontology."@en ;
+    rdfs:domain ipbes:SubChapter ;
+    rdfs:range ipbes:Reference .
+
+ipbes:Report a owl:Class ;
+    rdfs:label "Report"@en ;
+    rdfs:comment "Class representing report in the IPBES ontology."@en .
+
+ipbes:SubChapter a owl:Class,
+        owl:ObjectProperty ;
+    rdfs:label "SubChapter"@en,
+        "Subchapter"@en ;
+    rdfs:comment "Class representing subchapter in the IPBES ontology."@en,
+        "Property representing the relationship 'subchapter' in the IPBES ontology."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( ipbes:Reference ipbes:KnowledgeGap ipbes:SubMessage ) ] ;
+    rdfs:range ipbes:SubChapter .
+
+ipbes:SubMessage a owl:Class,
+        owl:ObjectProperty ;
+    rdfs:label "SubMessage"@en,
+        "Submessage"@en ;
+    rdfs:comment "Class representing submessage in the IPBES ontology."@en,
+        "Property representing the relationship 'submessage' in the IPBES ontology."@en ;
+    rdfs:domain ipbes:BackgroundMessage ;
+    rdfs:range ipbes:SubMessage .
+
+ipbes:BackgroundMessage a owl:Class,
+        owl:ObjectProperty ;
+    rdfs:label "Background Message"@en,
+        "BackgroundMessage"@en ;
+    rdfs:comment "Class representing backgroundmessage in the IPBES ontology."@en,
+        "Represents a background message related to invasive alien species."@en ;
+    rdfs:domain ipbes:KeyMessage ;
+    rdfs:range ipbes:BackgroundMessage .
