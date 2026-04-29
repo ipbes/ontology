@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ipbes="http://ontology.ipbes.net/report/">
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/ca">
+    <rdfs:label xml:lang="en">Ca</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 'ca' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/cl">
+    <rdfs:label xml:lang="en">Cl</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 'cl' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/country">
+    <rdfs:label xml:lang="en">Country</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 'country' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/cs">
+    <rdfs:label xml:lang="en">Cs</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 'cs' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/fl">
+    <rdfs:label xml:lang="en">Fl</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 'fl' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/hasDescription">
+    <rdfs:label xml:lang="en">has description</rdfs:label>
+    <rdfs:comment xml:lang="en">Provides a textual description of an entity.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://ontology.ipbes.net/report/KeyMessage"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://ontology.ipbes.net/report/SubMessage"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://ontology.ipbes.net/report/KnowledgeGap"/>
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first rdf:resource="http://ontology.ipbes.net/report/SubChapter"/>
+                        <rdf:rest>
+                          <rdf:Description>
+                            <rdf:first rdf:resource="http://ontology.ipbes.net/report/BackgroundMessage"/>
+                            <rdf:rest>
+                              <rdf:Description>
+                                <rdf:first rdf:resource="http://ontology.ipbes.net/report/Illustration"/>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                              </rdf:Description>
+                            </rdf:rest>
+
+                          </rdf:Description>
+                        </rdf:rest>
+
+                      </rdf:Description>
+                    </rdf:rest>
+
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/hasDoi">
+    <rdfs:label xml:lang="en">Hasdoi</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 'hasdoi' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://ontology.ipbes.net/report/Report"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://ontology.ipbes.net/report/Illustration"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://ontology.ipbes.net/report/Reference"/>
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first rdf:resource="http://ontology.ipbes.net/report/Chapter"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </rdf:Description>
+                    </rdf:rest>
+
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/hasEstablishedIncomplete">
+    <rdfs:label xml:lang="en">Hasestablishedincomplete</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 'hasestablishedincomplete' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://ontology.ipbes.net/report/SubMessage"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://ontology.ipbes.net/report/BackgroundMessage"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ontology.ipbes.net/hasReport">
+    <rdfs:label xml:lang="en">has report</rdfs:label>
+    <rdfs:comment xml:lang="en">Associates an entity with its corresponding report.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://ontology.ipbes.net/report/KeyMessage"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://ontology.ipbes.net/report/KnowledgeGap"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://ontology.ipbes.net/report/SubChapter"/>
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                        <rdf:rest>
+                          <rdf:Description>
+                            <rdf:first rdf:resource="http://ontology.ipbes.net/report/BackgroundMessage"/>
+                            <rdf:rest>
+                              <rdf:Description>
+                                <rdf:first rdf:resource="http://ontology.ipbes.net/report/Reference"/>
+                                <rdf:rest>
+                                  <rdf:Description>
+                                    <rdf:first rdf:resource="http://ontology.ipbes.net/report/Chapter"/>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                  </rdf:Description>
+                                </rdf:rest>
+
+                              </rdf:Description>
+                            </rdf:rest>
+
+                          </rdf:Description>
+                        </rdf:rest>
+
+                      </rdf:Description>
+                    </rdf:rest>
+
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://ontology.ipbes.net/report/Report"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/hasWellestablished">
+    <rdfs:label xml:lang="en">Haswellestablished</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 'haswellestablished' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://ontology.ipbes.net/report/SubMessage"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://ontology.ipbes.net/report/BackgroundMessage"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/hasUnresolved">
+    <rdfs:label xml:lang="en">Hasunresolved</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 'hasUnresolved' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://ontology.ipbes.net/report/SubMessage"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://ontology.ipbes.net/report/BackgroundMessage"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/hasInconclusive">
+    <rdfs:label xml:lang="en">Hasinconclusive</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 'hasInconclusive' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://ontology.ipbes.net/report/SubMessage"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://ontology.ipbes.net/report/BackgroundMessage"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/identifier">
+    <rdfs:label xml:lang="en">identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">An identifier assigned to entities within the dataset.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://ontology.ipbes.net/report/KeyMessage"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://ontology.ipbes.net/report/SubMessage"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://ontology.ipbes.net/report/KnowledgeGap"/>
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first rdf:resource="http://ontology.ipbes.net/report/BackgroundMessage"/>
+                        <rdf:rest>
+                          <rdf:Description>
+                            <rdf:first rdf:resource="http://ontology.ipbes.net/report/Illustration"/>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          </rdf:Description>
+                        </rdf:rest>
+
+                      </rdf:Description>
+                    </rdf:rest>
+
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/la">
+    <rdfs:label xml:lang="en">La</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 'la' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/report/re">
+    <rdfs:label xml:lang="en">Re</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 're' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ontology.ipbes.net/year">
+    <rdfs:label xml:lang="en">Year</rdfs:label>
+    <rdfs:comment xml:lang="en">Property representing the relationship 'year' in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ontology.ipbes.net/report"/>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="http://ontology.ipbes.net/report/KnowledgeGap">
+    <rdfs:label xml:lang="en">KnowledgeGap</rdfs:label>
+    <rdfs:comment xml:lang="en">Class representing knowledge gap in the IPBES ontology.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ontology.ipbes.net/report/Chapter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">Chapter</rdfs:label>
+    <rdfs:comment xml:lang="en">Class representing chapter in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://ontology.ipbes.net/report/Reference"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://ontology.ipbes.net/report/SubChapter"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://ontology.ipbes.net/report/Chapter"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ontology.ipbes.net/report/Illustration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">Illustration</rdfs:label>
+    <rdfs:comment xml:lang="en">Class representing illustration in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://ontology.ipbes.net/report/KeyMessage"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://ontology.ipbes.net/report/BackgroundMessage"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://ontology.ipbes.net/report/SubMessage"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://ontology.ipbes.net/report/Illustration"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ontology.ipbes.net/report/KeyMessage">
+    <rdfs:label xml:lang="en">KeyMessage</rdfs:label>
+    <rdfs:comment xml:lang="en">Class representing keymessage in the IPBES ontology.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ontology.ipbes.net/report/Reference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">Reference</rdfs:label>
+    <rdfs:comment xml:lang="en">Class representing reference in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ontology.ipbes.net/report/SubChapter"/>
+    <rdfs:range rdf:resource="http://ontology.ipbes.net/report/Reference"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ontology.ipbes.net/report/Report">
+    <rdfs:label xml:lang="en">Report</rdfs:label>
+    <rdfs:comment xml:lang="en">Class representing report in the IPBES ontology.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ontology.ipbes.net/report/SubChapter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">SubChapter</rdfs:label>
+    <rdfs:comment xml:lang="en">Class representing subchapter in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://ontology.ipbes.net/report/Reference"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://ontology.ipbes.net/report/KnowledgeGap"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://ontology.ipbes.net/report/SubMessage"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://ontology.ipbes.net/report/SubChapter"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ontology.ipbes.net/report/SubMessage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">SubMessage</rdfs:label>
+    <rdfs:comment xml:lang="en">Class representing submessage in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ontology.ipbes.net/report/BackgroundMessage"/>
+    <rdfs:range rdf:resource="http://ontology.ipbes.net/report/SubMessage"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ontology.ipbes.net/report/BackgroundMessage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">Background Message</rdfs:label>
+    <rdfs:comment xml:lang="en">Class representing background message in the IPBES ontology.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ontology.ipbes.net/report/KeyMessage"/>
+    <rdfs:range rdf:resource="http://ontology.ipbes.net/report/BackgroundMessage"/>
+  </owl:Class>
+
+</rdf:RDF>
